@@ -12,7 +12,9 @@ const Gallery = () => {
   return (
     <>
     <h1 style={{textAlign:"center",color:"rgb(145, 5, 59)"}}>Image Gallery</h1>
-    <div className="container">
+    {
+      Data.length>0 ?(
+        <div className="container">
     {
         Data.map((e)=>(
             
@@ -23,6 +25,9 @@ const Gallery = () => {
         ))
     }
       </div>
+      ): <h1 style={{textAlign:"center",color:'red'}}>Please Wait Image is Loading</h1>
+    }
+    
     </>
   )
 }
